@@ -1,0 +1,23 @@
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <%= image_tag @product.image_url(:medium) %>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <p> Cod.:<%= @product.codigo %></p>
+    <h3><%= @product.name %></h3>
+    <p><%= @product.description %></p>
+    <br>
+    <div class="center">
+      <p><%= link_to "Visitar Catálogo", "http://www.forestadent.com/documentpool/online_katalog/Cat33EE/index.html", {class: "btn btn-primary", target: "_blank"} %><br><br>
+      <%= link_to 'Atrás', products_path(category_id: @product.category_id), class: "btn btn-success" %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<% if user_signed_in? %>
+    <%= link_to "Agregar Producto", new_product_path, class: "btn btn-primary"%>
+<% end %>

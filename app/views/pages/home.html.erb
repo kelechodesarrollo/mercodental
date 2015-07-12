@@ -1,0 +1,208 @@
+<!-- Homepage Slider -->
+        <div class="homepage-slider">
+          <div id="sequence">
+        <ul class="sequence-canvas">
+          <!-- Slide 1 -->
+          <li class="bg4">
+            <!-- Slide Title -->
+            <h2 class="title">Glam Brackets</h2>
+            <!-- Slide Text -->
+            <h3 class="subtitle">Bracket cerámico de ligadura convencional. Es totalmente translúcido y satisface así los deseos de los pacientes estéticamente exigentes.</h3>
+            <!-- Slide Image -->
+            <%= image_tag('homepage-slider/slide1.gif', class: 'slide-img', alt: 'Slide 1') %>
+          </li>
+          <!-- End Slide 1 -->
+          <!-- Slide 2 -->
+          <li class="bg3">
+            <!-- Slide Title -->
+            <h2 class="title">Micro Sprint Brackets</h2>
+            <!-- Slide Text -->
+            <h3 class="subtitle">Es el bracket mas pequenho del mundo, perfil extremadamente plano, sin bordes afilados</h3>
+            <!-- Slide Image -->
+            <%= image_tag('homepage-slider/slide2.gif', class: "slide-img", alt: 'Slide 2') %>
+          </li>
+          <!-- End Slide 2 -->
+          <!-- Slide 3 -->
+          <li class="bg1">
+            <!-- Slide Title -->
+            <h2 class="title">QuicKlear Brackets</h2>
+            <!-- Slide Text -->
+            <h3 class="subtitle">Estetica optima, bracket de ceramica translucida <i>(transparente)</i>, Autoligable.<br>Clip de cierre flexible, acabado mate</h3>
+            <!-- Slide Image -->
+            <%= image_tag('homepage-slider/slide3.gif', class: 'slide-img', alt: 'Slide 3') %>
+          </li>
+          <!-- End Slide 3 -->
+          <!-- Slide 4 -->
+          <li class="bg4">
+            <!-- Slide Title -->
+            <h2 class="title">BioQuick Brackets</h2>
+            <!-- Slide Text -->
+            <h3 class="subtitle">Bracket metalico, interactivo, autoligable. <br> Una bonita sonrisa en un tiempo record</h3>
+            <!-- Slide Image -->
+            <%= image_tag('homepage-slider/slide4.gif', class: 'slide-img', alt: 'Slide 4') %>
+          </li>
+          <!-- End Slide 4 -->
+          <!-- Slide 5 -->
+          <li class="bg4">
+            <!-- Slide Title -->
+            <h2 class="title">Lingual Brackets</h2>
+            <!-- Slide Text -->
+            <h3 class="subtitle">Sencilla ortodoncia lingual, son excesivamente planos y confortables. <br> Brackets invisibles para resultados visiblemente rapidos.</h3>
+            <!-- Slide Image -->
+            <%= image_tag('homepage-slider/slide5.gif', class: 'slide-img', alt: 'Slide 5') %>
+          </li>
+          <!-- End Slide 5 -->
+        </ul>
+        <div class="sequence-pagination-wrapper">
+          <ul class="sequence-pagination">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- End Homepage Slider -->
+
+        <hr>
+        <div class="center">
+            <h2>Somos representantes exclusivos en Paraguay.</h2>
+            <%= link_to image_tag("jumbotron.jpg", style: "margin: 0 auto;",class: "img-responsive"), "http://www.forestadent.com/forestadent-es/", target: "_blank" %>
+        </div>
+        
+        
+        <!--Elastislide Carousel -->
+      
+               <!-- End Elastislide Carousel -->
+              <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2>Brackets Glam <span class="text-muted">Forestadent.</span></h2>
+          <p class="lead">No sólo los adultos, sino también cada vez más pacientes adolescentes buscan un tratamiento discreto con materiales estéticos. Con el nuevo Bracket GLAM de FORESTADENT puede Ud. satisfacer este deseo sin compromisos. El bracket monopieza resulta particularmente discreto gracias a su novedosa estructura cerámica: Mientras que la superficie lisa de muchos brackets cerámicos...</p>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Leer mas</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Brackets Glam</h4>
+                  </div>
+                  <div class="modal-body">
+                    <%= image_tag("bracketsglam.gif", class: "img-responsive img-rounded") %>
+                   <p>No sólo los adultos, sino también cada vez más pacientes adolescentes buscan un tratamiento discreto con materiales estéticos. Con el nuevo Bracket GLAM de FORESTADENT puede Ud. satisfacer este deseo sin compromisos. El bracket monopieza resulta particularmente discreto gracias a su novedosa estructura cerámica: Mientras que la superficie lisa de muchos brackets cerámicos llama la atención por unos llamativos reflejos de luz, GLAM posee un brillo mate y por este motivo tiene un efecto muy discreto. Además, los Brackets GLAM convencen por su excelente translucidez. Puesto que no poseen un color propio dominante, GLAM se adapta perfectamente al color natural de los dientes de cada paciente. Pero GLAM es capaz de todavía más. Gracias a los cantos redondeados de su Slot, presenta no sólo unos valores de fricción bajos, sino que también preserva las superficies de los arcos de color diente. Por ejemplo puede combinarse sin dificultades con los Arcos BioCosmetic, para lograr una impresión general con una estética óptima. Incluso los pacientes especialmente exigentes mostrarán una sonrisa satisfecha.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <%= image_tag("bracketsglam.gif", class: "img-responsive img-rounded") %>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <%= image_tag("bioquick.gif", class: "img-responsive img-rounded") %>
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">BioQuick<span class="text-muted">Forestadent.</span></h2>
+          <p class="lead">La 4ª generación de los brackets Quick. - Sujeción óptima sobre todas las formas de diente. La naturaleza ha creado el lado vestibular de las coronas dentales con una forma...</p>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Leer mas</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel2">BioQuick</h4>
+                  </div>
+                  <div class="modal-body">
+                    <%= image_tag("bioquick.gif", class: "img-responsive img-rounded") %>
+                   <p>La 4ª generación de los brackets Quick. - Sujeción óptima sobre todas las formas de diente. La naturaleza ha creado el lado vestibular de las coronas dentales con una forma mucho más uniforme que su lado lingual, sin embargo, no existen dos exactamente iguales. Con el propósito de que los brackets Quick puedan corresponder aún mejor a estas formas naturales, la base de la 4ª generación se guió exactamente por el modelo de la "madre naturaleza". Para ello se estudiaron miles de dientes de todo el mundo, se analizaron sus formas y se transfirieron los resultados al nuevo diseño de bracket. Y esto con un éxito revolucionario: BioQuick.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>     
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Mini-implantes Tecnología de Avanzada
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        En muchos casos se puede acelerar la ortodoncia o conseguir mejores resultados si tenemos un excelente punto de apoyo para mover los dientes en cualquiera de las tres dimensiones del espacio, utilizando un dispositivo complementario que llamamos mini-implante, ORTHOEASY® es un tornillo miniatura de titanio con menos de 2mm de diámetro. Este es un complemento del tratamiento de ortodoncia que lo empleamos temporalmente hasta cumplir los objetivos planteados, posteriormente es retirado sin dejar ninguna secuela.
+        <%= image_tag("mini-implantes.jpg", class: "img-responsive img-rounded") %>
+        <br>Los europeos han desarrollado esta tecnología y a través de años de investigación han conseguido excelentes resultados incluso en etapas de crecimiento y desarrollo. Ya en Latinoamérica existen desde hace 10 años y en nuestra experiencia clínica hemos tenido un gran éxito.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Brackets linguales 2D
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <p>Con los nuevos brackets linguales 2D de Forestadent la lengua de su paciente recuperará su espacio habitual.
+        Los nuevos backets linguales 2D de  Forestadent son extremadamente planos, confortables y,  gracias a su sencilla técnica, especialmente adecuados para  profesionales que quieran empezar en el campo de la ortodoncia. Fáciles de manejar,  económicos y sin costes de laboratorio. Este sistema de brackets ofrece una forma económica de introducir la ortodoncia lingual en cualquier clínica.
+
+        </p>
+        <%= image_tag("lingual2d.gif", class: "img-responsive img-rounded", style: "height: 350px; width: 350;") %>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Truklear
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">Ya puede satisfacer a la perfección las máximas exigencias estéticas. FORESTADENT pone a su disposición el primer bracket SL del mundo con cuerpo y cierre de cerámica 100 % sin metal.
+      Una estética nunca vista.
+      TruKlear® destaca en toda su línea. <br>
+      <%= image_tag("truklear.gif", class: "img-responsive img-rounded", style: "height: 400px; width: 450;") %>
+      <br>
+      Totalmente estéticos: una novedad con cuerpo y corredera de cerámica.
+      100 % sin metal: nada interfiere con la estética y el bracket es adecuado para alérgicos al níquel.
+      Cierre más ancho: el clip es más ancho en el lado del slot para obtener una buena transmisión de la rotación.
+      Limpieza segura: El clip se abre hacia gingival, lo que protege el cierre de posibles daños al masticar y de la acumulación de restos de comida.
+      </div>
+    </div>
+  </div>
+</div>
+
+   
+
+
+    

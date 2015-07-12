@@ -1,0 +1,22 @@
+    
+<div class="container">    
+<% @categories.each do |category| %>
+    <div class="well">
+        <div class="media">
+          <a class="pull-left" href="#">
+          <img class="media-object" src="<%= category.image_url(:thumb) %>">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading"><%= category.name %></h4>
+            <p class="text-right"><%= category.subcategory %></p>
+            <p class=""><%= category.description %></p>
+         </div>
+      </div>
+    </div>
+<% end -%>
+</div>
+
+
+<% if user_signed_in? %>
+  <%= link_to 'Nueva Categoria', new_category_path, class: "btn btn-primary" %>
+<% end %>

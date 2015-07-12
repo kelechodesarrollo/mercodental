@@ -1,0 +1,78 @@
+<h3 class="center"><strong>Eventos Locales Destacados</strong></h3>
+<div class="row">
+      <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+        <ul class="event-list">
+          <% @events.each do |event| %>
+          <li>
+            <time>
+              <span class="day"><%= event.date.day %></span>
+              <span class="month"><%= event.date.month %></span>
+              <span class="year"><%= event.date.year %></span>
+              <span class="time">12:00 AM</span>
+            </time>
+            <%= image_tag event.image.url %>
+            <div class="info">
+              <h2 class="title"><%= event.name %></h2>
+              <p class="desc"><%= event.description %></p>
+              <ul>
+                <strong><li style="width:80%;"></span><%= link_to "Ver Detalles", event, class: "btn btn-link" %></li></strong> 
+              </ul>
+            </div>
+            <div class="social">
+              <ul>
+                <li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+                <li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+                <li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-instagram"></span></a></li>
+              </ul>
+            </div>
+          </li>
+        <% end -%>
+        </ul>
+      </div>
+    </div>
+    <br>
+  <h3 class="center"><strong>Eventos Internacionales Destacados</strong></h3>
+  <div class="row">
+      <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+        <ul class="event-list">
+          <% @eventsI.each do |event| %>
+          <li>
+            <time>
+              <span class="day"><%= event.date.day %></span>
+              <span class="month"><%= event.date.month %></span>
+              <span class="year"><%= event.date.year %></span>
+              <span class="time">12:00 AM</span>
+            </time>
+            <%= image_tag event.image.url %>
+            <div class="info">
+              <h2 class="title"><%= event.name %></h2>
+              <p class="desc"><%= event.description %></p>
+              <ul>
+                <strong><li style="width:80%;"></span><%= link_to "Ver Detalles", event, class: "btn btn-link" %></li></strong> 
+              </ul>
+            </div>
+            <div class="social">
+              <ul>
+                <li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+                <li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+                <li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-instagram"></span></a></li>
+              </ul>
+            </div>
+          </li>
+        <% end -%>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+<br>
+
+<% if user_signed_in? %>
+  <%= link_to 'Agregar Evento', new_event_path,  data: { no_turbolink: true}, class: "btn btn-primary" %>
+<% end %>
+
+

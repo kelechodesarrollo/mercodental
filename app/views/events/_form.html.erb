@@ -1,0 +1,82 @@
+ <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+ 
+<script>
+ $.datepicker.regional['es'] = {
+ closeText: 'Cerrar',
+ prevText: '<Ant',
+ nextText: 'Sig>',
+ currentText: 'Hoy',
+ monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+ monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+ dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+ dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+ dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+ weekHeader: 'Sm',
+ dateFormat: 'dd/mm/yy',
+ firstDay: 1,
+ isRTL: false,
+ showMonthAfterYear: false,
+ yearSuffix: ''
+ };
+ $.datepicker.setDefaults($.datepicker.regional['es']);
+$(function () {
+$("#event_date").datepicker();
+});
+
+</script>
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="form-group">
+    <%= f.label :name, "Nombre del Evento" %><br>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, "Descripción" %><br>
+    <%= f.text_field :description, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :instructor, "Instructor Designado" %><br>
+    <%= f.text_field :instructor, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :place, "Lugar del Evento" %><br>
+    <%= f.text_field :place, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :observation, "Detalles Adicionales" %><br>
+    <%= f.text_field :observation, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :date, "Fecha del Evento" %><br>
+    <%= f.text_field :date, autocomplete: :off, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :image, "Banner del Evento" %><br>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :price, "Precio de Entrada" %><br>
+    <%= f.text_field :price, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :tipo %>
+    <%= f.select :tipo, options_for_select([['Nacional'], ['Internacional']])%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Registrar Evento",class: "btn btn-primary" %>
+  </div>
+
+<% end %>

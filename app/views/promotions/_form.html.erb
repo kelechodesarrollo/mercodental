@@ -1,0 +1,34 @@
+<%= form_for @promotion, html: { multipart: true} do |f| %>
+  <% if @promotion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@promotion.errors.count, "error") %> prohibited this promotion from being saved:</h2>
+
+      <ul>
+      <% @promotion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, "Nombre" %><br>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, "Descripcion" %><br>
+    <%= f.text_field :description, class: "form-control" %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :option, "Opcion" %><br>
+    <%= f.select :option, options_for_select([['Vigente'], ['Expirado']])%>
+  </div>
+  <div class="form-group">
+    <%= f.label :image, "Imagen" %><br>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Registrar Promocion", class: "btn btn-primary" %>
+  </div>
+<% end %>
