@@ -27,10 +27,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'carrierwave'
-
-gem 'mini_magick'
-
 gem 'devise'
 
 # Use ActiveModel has_secure_password
@@ -57,3 +53,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem "mini_magick"
+gem 'carrierwave'
+gem "fog"
