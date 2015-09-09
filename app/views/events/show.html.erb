@@ -21,6 +21,7 @@
 
 <% if user_signed_in? %>
   <%= link_to 'Editar', edit_event_path(@event), class: "btn btn-warning" %> |
+  <%= link_to 'Eliminar', @event, method: :delete, data: { confirm: "Estas seguro/a?" }, class: "btn btn-info" %>
 <% end %>
 <%= link_to 'Atrás', events_path, class: "btn btn-success" %>
 
