@@ -29,7 +29,7 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to @event, notice: 'Evento creado correctamente.' }
         format.json { render action: 'show', status: :created, location: @event }
       else
         format.html { render action: 'new' }
@@ -43,7 +43,7 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to @event, notice: 'Evento modificado correctamente.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
